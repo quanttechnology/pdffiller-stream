@@ -121,7 +121,9 @@ var pdffiller = {
             var args = [sourceFile, "fill_form", '-', "output", '-'];
             if (shouldFlatten) {
                 args.push("flatten");
-            }
+            }else {
+	    	args.push("need_appearances");
+	    }
             
             var childProcess = spawn("pdftk", args);
 
